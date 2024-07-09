@@ -270,7 +270,8 @@ def main(args):
             label_smoothing=args.smoothing, num_classes=args.nb_classes)
     if 'vit' in args.model:
         if args.colab:
-            # The version of Colab has some issue with initialazing the global pool. Not include it as parameter may decrease the performance a little but still show the effect of our method.
+            # The version of Colab has some issue with initialazing the global pool. We choose not to include it here.
+            # Using the default global pool decreases the performance over all baselines, but DNE still shows strong effect.
             model = models_vit.__dict__[args.model](
                 img_size=args.input_size,
                 num_classes=args.nb_classes,
