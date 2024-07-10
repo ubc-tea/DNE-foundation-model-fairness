@@ -22,7 +22,7 @@ The following notebook provides a demo to use our pretrained DNE while finetunin
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nanboy-Ronan/DNE-foundation-model-fairness/blob/main/finetune_fm_with_dne.ipynb)
 
 ## Data
-We offer our preprocessed metadata ![train](https://drive.google.com/file/d/1U95sIzgAdFjgbdvW2zxGCnFX3qawvMDq/view?usp=drive_link) and ![valid](https://drive.google.com/file/d/1fmQqy1h8NnvAncLuxUNka22DslVmLsz2/view?usp=drive_link). You need to download the CheXpert dataset.
+We offer our preprocessed metadata [train](https://drive.google.com/file/d/1U95sIzgAdFjgbdvW2zxGCnFX3qawvMDq/view?usp=drive_link) and [valid](https://drive.google.com/file/d/1fmQqy1h8NnvAncLuxUNka22DslVmLsz2/view?usp=drive_link). You need to download the CheXpert dataset.
 ## Pipeline
 There are three steps to train the DNE to achieve the above performance.
 
