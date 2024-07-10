@@ -32,14 +32,6 @@ class DNELayer(torch.nn.Module):
     def forward(self, x):
         return x + self.noise
 
-class NoiseLayer(torch.nn.Module):
-    def __init__(self, shape):
-        super(NoiseLayer, self).__init__()
-        self.noise = torch.nn.Parameter(torch.zeros(shape))
-
-    def forward(self, x):
-        return x + self.noise
-
 def train_dne(
         model: torch.nn.Module,
         data_loader: Iterable,

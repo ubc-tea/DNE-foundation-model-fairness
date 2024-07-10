@@ -1,4 +1,5 @@
 # DNE-foundation-model-fairness
+![main](./figs/main.png)
 
 ## Abstract
 In the era of Foundation Models' (FMs) rising prominence in AI, our study addresses the challenge of biases in medical images while the model operates in black-box (e.g., using FM API), particularly spurious correlations between pixels and sensitive attributes. Traditional methods for bias mitigation face limitations due to the restricted access to web-hosted FMs and difficulties in addressing the underlying bias encoded within the FM API. We propose a D(ebiased) N(oise) E(diting) strategy, termed DNE, which generates DNE noise to mask such spurious correlation. DNE is capable of mitigating bias both within the FM API embedding and the images themselves. Furthermore, DNE is suitable for both white-box and black-box FM APIs, where we introduced G(reedy) (Z)eroth-O(rder) (GeZO) optimization for it when the gradient is inaccessible in black-box APIs. Our whole pipeline enables fairness-aware image editing that can be applied across various medical contexts without requiring direct model manipulation or significant computational resources. Our empirical results demonstrate the method's effectiveness in maintaining fairness and utility across different patient groups and diseases. In the era of AI-driven medicine, this work contributes to making healthcare diagnostics more equitable, showcasing a practical solution for bias mitigation in pre-trained image FMs.
@@ -20,7 +21,8 @@ Modern FMs are not always accessible to user, e.g., those blackbox APIs. This me
 The following notebook provides a demo to use our pretrained DNE while finetuning the FM.
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nanboy-Ronan/DNE-foundation-model-fairness/blob/main/finetune_fm_with_dne.ipynb)
 
-
+## Data
+We offer our preprocessed metadata ![train](https://drive.google.com/file/d/1U95sIzgAdFjgbdvW2zxGCnFX3qawvMDq/view?usp=drive_link) and ![valid](https://drive.google.com/file/d/1fmQqy1h8NnvAncLuxUNka22DslVmLsz2/view?usp=drive_link). You need to download the CheXpert dataset.
 ## Pipeline
 There are three steps to train the DNE to achieve the above performance.
 
