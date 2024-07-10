@@ -22,15 +22,15 @@ The following notebook automates all process (download metadata, data pretrained
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Nanboy-Ronan/DNE-foundation-model-fairness/blob/main/finetune_fm_with_dne.ipynb)
 
 ## Data
-We offer our preprocessed metadata [train](https://drive.google.com/file/d/1U95sIzgAdFjgbdvW2zxGCnFX3qawvMDq/view?usp=drive_link) and [valid](https://drive.google.com/file/d/1fmQqy1h8NnvAncLuxUNka22DslVmLsz2/view?usp=drive_link). You need to download the (CheXpert)[https://stanfordmlgroup.github.io/competitions/chexpert/] dataset.
+We offer our preprocessed metadata [train](https://drive.google.com/file/d/1U95sIzgAdFjgbdvW2zxGCnFX3qawvMDq/view?usp=drive_link) and [valid](https://drive.google.com/file/d/1fmQqy1h8NnvAncLuxUNka22DslVmLsz2/view?usp=drive_link). You need to download the [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) dataset.
 
 ## Pipeline
 There are three steps to train the DNE to achieve the above performance.
 
 Before your start:
-- First download the (pretrained FM)[] and place it under `checkpoints` folder.
+- First download the [pretrained FM](https://drive.google.com/file/d/10wqOFCkhyWp6JdSFADrH6Xu9e1am3gXJ/view) and place it under `checkpoints` folder.
 - Second, download the CheXpert data and metadata above and place it under `data` folder and `meta_data` folder.
-- Third, you can optionally download our (pretrained DNE)[https://drive.google.com/file/d/1FERRX2nxWsIH3bNqt_hQIYrZq5tHeHlu/view?usp=drive_link] and place it under the root of this repo.
+- Third, you can optionally download our pretrained [DNE](https://drive.google.com/file/d/1FERRX2nxWsIH3bNqt_hQIYrZq5tHeHlu/view?usp=drive_link) and place it under the root of this repo.
 
 Here are commands to quite finish all above.
 ```bash
@@ -97,7 +97,7 @@ OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch \
     --lambda_reg 0.001 
 ```
 
-### Step 2 (black-box): Train the DNE using GeZO (greey gradient zeroth-order optimization) 
+### Step 2 (black-box): Train the DNE using GeZO (greedy gradient zeroth-order optimization) 
 If the FM is not accessible, e.g. through a black-box API. User can choose to apply GeZO to optimize the DNE where gradient is not needed.
 
 ```bash
