@@ -5,15 +5,6 @@
 In the era of Foundation Models' (FMs) rising prominence in AI, our study addresses the challenge of biases in medical images while the model operates in black-box (e.g., using FM API), particularly spurious correlations between pixels and sensitive attributes. Traditional methods for bias mitigation face limitations due to the restricted access to web-hosted FMs and difficulties in addressing the underlying bias encoded within the FM API. We propose a D(ebiased) N(oise) E(diting) strategy, termed DNE, which generates DNE noise to mask such spurious correlation. DNE is capable of mitigating bias both within the FM API embedding and the images themselves. Furthermore, DNE is suitable for both white-box and black-box FM APIs, where we introduced G(reedy) (Z)eroth-O(rder) (GeZO) optimization for it when the gradient is inaccessible in black-box APIs. Our whole pipeline enables fairness-aware image editing that can be applied across various medical contexts without requiring direct model manipulation or significant computational resources. Our empirical results demonstrate the method's effectiveness in maintaining fairness and utility across different patient groups and diseases. In the era of AI-driven medicine, this work contributes to making healthcare diagnostics more equitable, showcasing a practical solution for bias mitigation in pre-trained image FMs.
 
 
-## Schedule
-
-- [x] Release the train dne code.
-- [x] Release the finetune FM code.
-- [x] Release preprocessed datasets
-- [x] Release pretrained dne and models.
-- [ ] Release the demo notebooks
-
-
 ## Mechanism
 Modern FMs are not always accessible to user, e.g., those blackbox APIs. This means that the user can _only do linear probing_ using the FM's embedding during classificion, which prevents them from using traditional bias mitigation strategies. This motivate us to propose **DNE**. The mechanism of **DNE** is to train a vector (called **DNE**) that can be added on the image so that it can mask the sensitive-atrribute-related spurious correlation during training. **DNE** can be updated in both the white-box model and black-box model. 
 
@@ -32,7 +23,7 @@ Before your start:
 - Second, download the CheXpert data and metadata above and place it under `data` folder and `meta_data` folder.
 - Third, you can optionally download our pretrained [DNE](https://drive.google.com/file/d/1FERRX2nxWsIH3bNqt_hQIYrZq5tHeHlu/view?usp=drive_link) and place it under the root of this repo.
 
-Here are commands to quite finish all above.
+Here are commands to quick finish all above.
 ```bash
 # Clone the repo
 git clone https://github.com/Nanboy-Ronan/DNE-foundation-model-fairness
