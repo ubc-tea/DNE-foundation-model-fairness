@@ -114,6 +114,7 @@ OMP_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch \
     --sampled_steps 10 \
     --lambda_reg 0.001
 ```
+_Note: only you one step 2 needs to get executed._
 
 ### Step 3: Finetune the FM with DNE
 Finally, we train the FM. Normally, user finetune the FM using linear probing, where they take the embedding of the FM and finetune its head. With DNE added on the input images, the finetune process become more fair.
