@@ -21,9 +21,9 @@ There are three steps to train the DNE to achieve the above performance.
 Before your start:
 - First download the [pretrained FM](https://drive.google.com/file/d/10wqOFCkhyWp6JdSFADrH6Xu9e1am3gXJ/view) and place it under `checkpoints` folder.
 - Second, download the CheXpert data and metadata above and place it under `data` folder and `meta_data` folder.
-- Third, you can optionally download our pretrained [DNE](https://drive.google.com/file/d/1FERRX2nxWsIH3bNqt_hQIYrZq5tHeHlu/view?usp=drive_link) and place it under the root of this repo.
+- Third, you can optionally download our pre-trained [DNE](https://drive.google.com/file/d/1FERRX2nxWsIH3bNqt_hQIYrZq5tHeHlu/view?usp=drive_link) and place it under the root of this repo.
 
-Here are commands to quick finish all above.
+Here are commands to quickly finish all the above.
 ```bash
 # Clone the repo
 git clone https://github.com/Nanboy-Ronan/DNE-foundation-model-fairness
