@@ -6,7 +6,7 @@ In the era of Foundation Models' (FMs) rising prominence in AI, our study addres
 
 
 ## Mechanism
-Modern FMs are not always accessible to user, e.g., those blackbox APIs. This means that the user can _only do linear probing_ using the FM's embedding during classificion, which prevents them from using traditional bias mitigation strategies. This motivate us to propose **DNE**. The mechanism of **DNE** is to train a vector (called **DNE**) that can be added on the image so that it can mask the sensitive-atrribute-related spurious correlation during training. **DNE** can be updated in both the white-box model and black-box model. 
+Modern FMs are not always accessible to user, e.g., those blackbox APIs. This means that the user can _only do simple adaptation, like linear probing,_ using the FM's embedding during classificion, which prevents them from using traditional bias mitigation strategies. This motivate us to propose **DNE**. The mechanism of **DNE** is to train a vector (called **DNE**) that can be added on the image so that it can mask the sensitive-atrribute-related spurious correlation during training. **DNE** can be updated in both the white-box model and black-box model. 
 
 ## Demo with Pretrained DNE
 The following notebook automates all process (download metadata, data pretrained model and DNE) and provides a demo to use our pretrained DNE while finetuning the FM.
