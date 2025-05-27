@@ -453,8 +453,8 @@ def main(args):
                     eval_stat = evaluate_disease(loader, model, device, args)
                     result_dict[sub_name] = eval_stat['acc1']
             eo_n = abs(result_dict['male_nofinding'] - result_dict['female_nofinding'])
-            eo_p = abs(result_dict['male_{}'.format(args.dataset.lower())] - result_dict['female_{}'.format(args.dataset.lower())])
-            di = 1 - (result_dict['male_{}'.format(args.dataset.lower())] / result_dict['female_{}'.format(args.dataset.lower())])
+            eo_p = abs(result_dict['male_{}'.format(args.disease.lower())] - result_dict['female_{}'.format(args.disease.lower())])
+            di = 1 - (result_dict['male_{}'.format(args.disease.lower())] / result_dict['female_{}'.format(args.disease.lower())])
             print("Overall Acc: ", test_stats['acc1'])
             print("EO_n: ", eo_n)
             print("EO_p: ", eo_p)
