@@ -211,7 +211,7 @@ def main(args):
     dataset_train = build_dataset_chest_xray(split='train', args=args)
     dataset_test = build_dataset_chest_xray(split='test', args=args)
 
-    subgroup = ["male_nofinding", "male_{}".format(args.disease.lower()), "female_nofinding", "female_{}".format(args.disease.lower)]
+    subgroups = ["male_nofinding", "male_{}".format(args.disease.lower()), "female_nofinding", "female_{}".format(args.disease.lower)]
 
     subgroup_datasets = {}
     for subgroup in subgroups:
