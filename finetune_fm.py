@@ -310,7 +310,7 @@ def main(args):
                         except:
                             pass
             else: # load pretrained model from the given path
-                checkpoint = torch.load(args.finetune, map_location='cpu', weights_only="False")
+                checkpoint = torch.load(args.finetune, map_location='cpu', weights_only=False)
                 print("Load pre-trained checkpoint from: %s" % args.finetune)
                 checkpoint_model = checkpoint['model']
                 state_dict = model.state_dict()
