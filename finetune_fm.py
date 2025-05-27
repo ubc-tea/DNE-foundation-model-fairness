@@ -310,7 +310,7 @@ def main(args):
                         except:
                             pass
             else: # load pretrained model from the given path
-                checkpoint = torch.load(args.finetune, map_location='cpu')
+                checkpoint = torch.load(args.finetune, map_location='cpu', weights_only="False")
                 print("Load pre-trained checkpoint from: %s" % args.finetune)
                 checkpoint_model = checkpoint['model']
                 state_dict = model.state_dict()
@@ -355,7 +355,7 @@ def main(args):
     
     if args.adddne:
         dne_layer = DNELayer((224, 224))
-        dne_state_dict = torch.load(args.dne_path)
+        dne_state_dict = torch.load(args.dne_path, weights_only="False")
         dne_layer.load_state_dict(dne_state_dict)
         dne_layer.to(device)
 
