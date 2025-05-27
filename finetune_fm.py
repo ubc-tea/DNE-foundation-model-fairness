@@ -355,7 +355,7 @@ def main(args):
     
     if args.adddne:
         dne_layer = DNELayer((224, 224))
-        dne_state_dict = torch.load(args.dne_path, weights_only="False")
+        dne_state_dict = torch.load(args.dne_path, weights_only=False)
         dne_layer.load_state_dict(dne_state_dict)
         dne_layer.to(device)
 
